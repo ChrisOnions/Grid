@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://jkhjhv08q0jj"]
+
+[ext_resource type="Texture2D" uid="uid://bsfn33cq7o8s2" path="res://Assets/Inventory_Border_panel.png" id="1_qnpn7"]
+[ext_resource type="Script" path="res://Scripts/Inventory/inventory_container_Manager.gd" id="2_du2ms"]
+[ext_resource type="PackedScene" uid="uid://bx2chvi3hk5j2" path="res://Scenes/Inventory/Inventory_seperation_pannels.tscn" id="2_u03hc"]
+[ext_resource type="PackedScene" uid="uid://bwxgpbkqal470" path="res://Scenes/Inventory/Inventory_seperation_pannels_Equiptment.tscn" id="3_0lsow"]
+[ext_resource type="PackedScene" uid="uid://b2l4hh08at6oj" path="res://Scenes/Inventory/Inventory_seperation_pannels_Inventory.tscn" id="4_1n6dq"]
+[ext_resource type="PackedScene" uid="uid://dlpsvnva7go4s" path="res://Scenes/Inventory/Inventory_seperation_pannels_Loot_test.tscn" id="6_u7p7k"]
+
+[node name="Inventory_Container" type="NinePatchRect" groups=["Player_Group"]]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 58.0
+offset_top = 62.0
+offset_right = -66.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+size_flags_stretch_ratio = 13.96
+texture = ExtResource("1_qnpn7")
+region_rect = Rect2(30.0313, 44.1898, 1858.17, 1004.23)
+patch_margin_left = 20
+patch_margin_top = 19
+patch_margin_right = 18
+patch_margin_bottom = 18
+script = ExtResource("2_du2ms")
+
+[node name="Panel_Spacing" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -814.0
+offset_top = -395.0
+offset_right = 814.0
+offset_bottom = 409.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Character_Stats" parent="Panel_Spacing" instance=ExtResource("2_u03hc")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Equipment" parent="Panel_Spacing" instance=ExtResource("3_0lsow")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Inventory" parent="Panel_Spacing" instance=ExtResource("4_1n6dq")]
+layout_mode = 2
+
+[node name="Chest" parent="Panel_Spacing" instance=ExtResource("6_u7p7k")]
+visible = false
+layout_mode = 2

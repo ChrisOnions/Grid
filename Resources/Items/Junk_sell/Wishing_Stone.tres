@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://6ax2k7qgpeej"]
+
+[ext_resource type="Script" path="res://Scripts/Items_Drops_more/Item_Class.gd" id="1_7ipdk"]
+[ext_resource type="Texture2D" uid="uid://b6tvw4761hu2s" path="res://Assets/Rock.png" id="2_btuye"]
+
+[resource]
+script = ExtResource("1_7ipdk")
+name = "Wishing Stone"
+texture = ExtResource("2_btuye")
+description = ""
+max_stack = 1
+price = 10
+item_rarity_value = null

@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://dn6o7j0sxogl7"]
+
+[ext_resource type="Script" path="res://Scenes/Overlay/health_mana_hud_.gd" id="1_e746d"]
+[ext_resource type="Texture2D" uid="uid://bu26opocgw052" path="res://Assets/ManaOver.png" id="1_p07bt"]
+[ext_resource type="Texture2D" uid="uid://kel8r3x8kkob" path="res://Assets/ManaUnder.png" id="2_qhamv"]
+[ext_resource type="Texture2D" uid="uid://dd7f1py3huwnr" path="res://Assets/Health_Under.png" id="3_1336v"]
+[ext_resource type="Texture2D" uid="uid://3t3tdk2hlbio" path="res://Assets/Health_Over.png" id="4_igct4"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e746d")
+
+[node name="Health_HUD_Display" type="TextureProgressBar" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -76.0
+offset_right = 228.0
+offset_bottom = -60.0
+grow_vertical = 0
+scale = Vector2(2, 2)
+max_value = 10.0
+value = 5.0
+texture_under = ExtResource("3_1336v")
+texture_progress = ExtResource("4_igct4")
+
+[node name="Mana_HUD_Display" type="TextureProgressBar" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 38.0
+offset_top = -42.0
+offset_right = 182.0
+offset_bottom = -26.0
+grow_vertical = 0
+scale = Vector2(2, 2)
+max_value = 10.0
+value = 5.0
+texture_under = ExtResource("1_p07bt")
+texture_progress = ExtResource("2_qhamv")

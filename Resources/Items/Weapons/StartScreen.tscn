@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://bx51b4et7hmf2"]
+
+[sub_resource type="FontVariation" id="FontVariation_2hcjw"]
+variation_transform = Transform2D(1.545, 0, 0, 1, 0, 1.055)
+spacing_glyph = 6
+spacing_space = 7
+spacing_top = 5
+spacing_bottom = 5
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox_Button_Container" type="VBoxContainer" parent="."]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 178.0
+offset_top = 756.0
+offset_right = -1524.0
+offset_bottom = -161.0
+grow_vertical = 0
+
+[node name="Button_Start" type="Button" parent="VBox_Button_Container"]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("FontVariation_2hcjw")
+theme_override_font_sizes/font_size = 20
+text = "Start Game"
+
+[node name="Button_Options" type="Button" parent="VBox_Button_Container"]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("FontVariation_2hcjw")
+theme_override_font_sizes/font_size = 20
+text = "Options"
+
+[node name="Button_Exit" type="Button" parent="VBox_Button_Container"]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("FontVariation_2hcjw")
+theme_override_font_sizes/font_size = 20
+text = "Exit"
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 219.0
+offset_right = 1090.0
+offset_bottom = 491.0

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbjuijraam30r"]
+
+[ext_resource type="Script" path="res://Scenes/cheest.gd" id="1_b85br"]
+[ext_resource type="Texture2D" uid="uid://caxnm2wxq2yu1" path="res://Assets/chest.png" id="2_0qmqn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mihms"]
+radius = 7.0
+
+[node name="Cheest" type="StaticBody2D"]
+position = Vector2(548, 208)
+script = ExtResource("1_b85br")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, 6)
+shape = SubResource("CircleShape2D_mihms")
+
+[node name="Chest" type="TextureRect" parent="."]
+offset_right = 15.0
+offset_bottom = 12.0
+texture = ExtResource("2_0qmqn")
+expand_mode = 1

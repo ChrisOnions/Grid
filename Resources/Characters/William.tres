@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CharacterStats" load_steps=2 format=3 uid="uid://bssq4ki1j04tu"]
+
+[ext_resource type="Script" path="res://Scripts/Player/CharacterResource.gd" id="1_162o6"]
+
+[resource]
+script = ExtResource("1_162o6")
+Name = "William"
+Health = 104
+Max_Health = 100
+Mana = 67
+Max_Mana = 100
+Attack = 1
+Defence = 0
