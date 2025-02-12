@@ -7,7 +7,7 @@
 script = ExtResource("1_7ipdk")
 name = "Wishing Stone"
 texture = ExtResource("2_btuye")
-description = ""
-max_stack = 1
+description = "Wet looking stone"
+can_stack = null
 price = 10
-item_rarity_value = null
+item_rarity_value = 1

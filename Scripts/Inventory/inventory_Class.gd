@@ -30,29 +30,19 @@ func initialise_inventory(value: int) -> void:
 		var slot: Control = INVENTORY_SLOT_CONTAINER.instantiate()
 		inventory_items_container.add_child(slot) 
 		inventory_slots.append(slot)
-		SignalBus.inventory_item_click.connect(_on_inventory_item_click )
 
 func _on_inventory_item_click(slot: Control) -> void :
 	print("signal slick" , slot)
 
-##func _on_slot_clicked(slot: Control, index: int) -> void:
-	#if selected_item_index == -1:
-		# First click: select the item
-		#if _Inventory[index] != null:
-			#selected_item_index = index
-			#print("Item selected at slot:", index)
-	#else:
-		# Second click: swap items
-		#swap_items(selected_item_index, index)
-		#selected_item_index = -1  # Deselect after moving
 
 func update_inventory() -> void:
 	for i in range(_Inventory.size()):
 		var item : ItemResource = _Inventory[i]
 		var slot : Control = inventory_slots[i]
 		if item != null:
-			slot.get_node("Icon").texture = item.texture 
-			#slot.get_node("QuantityLabel").text = str(item.quantity) if item.stackable else ""
+			#slot.new_item_assigned_to_slot(item) Both ways are viable
+			slot.slot_item = item 
+			
 		else:
 			slot.get_node("Icon").texture = null
 
